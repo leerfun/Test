@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StockActivity" >
+     <LinearLayout 
+        android:id="@+id/llTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:orientation="horizontal" 
+        android:background="#ffffff"       
+        >
+        <TextView android:id="@+id/TVTitleName"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.618"
+            android:text="纯净自选股"
+            android:textColor="#ffffff"
+            android:background="#880000"
+            />
+        <TextView android:id="@+id/TVTitleHu"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#888888"
+            android:text="加载上证指数"
+             android:textColor="#ffffff"
+             android:layout_marginRight="0.5dp"/>
+
+        <TextView
+            android:id="@+id/TVTitleShen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#888888"
+            android:text="加载深证指数"
+            android:textColor="#ffffff" 
+            android:layout_marginLeft="0.5dp"/>
+        
+    </LinearLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/llTitleBar"
+        ></android.support.v4.view.ViewPager>
+
+</RelativeLayout>

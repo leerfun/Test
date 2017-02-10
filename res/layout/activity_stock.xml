@@ -1,0 +1,225 @@
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".DetilActivity" >
+
+    <LinearLayout
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+         >
+         <TextView android:id="@+id/custom_tv"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="技术分析"
+             android:layout_gravity="center_horizontal"
+             android:textColor="#FF0000"/>
+  <lecho.lib.hellocharts.view.LineChartView
+	    android:id="@+id/line_chart"
+	    android:layout_width="fill_parent"
+	    android:layout_height="400dp"
+	    android:layout_marginTop="5dp"
+	  />
+   <RadioGroup
+            android:id="@+id/custom_rg"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/Crb_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="策略一"
+                android:textColor="#FF0000"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/Crb_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="策略二"
+                android:textColor="#777777" />
+
+            <RadioButton
+                android:id="@+id/Crb_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="策略三"
+                android:textColor="#777777" />
+
+            <RadioButton
+                android:id="@+id/Crb_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="自定策略"
+                android:textColor="#777777" />
+           
+        </RadioGroup>
+    
+       <TextView android:id="@+id/tv_analyze"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:gravity="center"
+           android:paddingTop="10dp"
+           android:hint="未达到持有标准，谨慎投资"/>
+    </LinearLayout>
+    
+    
+	<LinearLayout
+	    
+	    android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+	    >
+	
+
+    <RelativeLayout
+        android:id="@+id/contentre"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         >
+
+        <TextView
+            android:id="@+id/detil_stockName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="Loading.."
+            android:textColor="#777777" />
+
+        <TextView
+            android:id="@+id/detil_stockGrid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@+id/detil_stockName"
+            android:text="Loading.."
+            android:textColor="#777777" />
+
+        <TextView
+            android:id="@+id/detil_nowPri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/detil_stockName"
+            android:layout_marginTop="8dp"
+            android:gravity="center|bottom"
+            android:text="Loading.."
+            android:textColor="#777777"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/detil_increase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/detil_nowPri"
+            android:layout_below="@+id/detil_stockGrid"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/detil_nowPri"
+            android:gravity="center|bottom"
+            android:text="Loading.."
+            android:textColor="#777777" />
+
+        <TextView
+            android:id="@+id/detil_increPer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/detil_nowPri"
+            android:layout_below="@+id/detil_stockGrid"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/detil_increase"
+            android:gravity="center|bottom"
+            android:text="Loading..."
+            android:textColor="#777777" />
+
+    
+
+            <ImageView
+                android:id="@+id/detil_iv_detilpic1"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/pic_downloading" 
+                android:layout_below="@+id/detil_increPer"/>
+      
+
+        <RadioGroup
+            android:id="@+id/detil_rg"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/detil_iv_detilpic1"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rb_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="Min"
+                android:textColor="#FF0000"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/rb_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="Day"
+                android:textColor="#777777" />
+
+            <RadioButton
+                android:id="@+id/rb_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="Week"
+                android:textColor="#777777" />
+
+            <RadioButton
+                android:id="@+id/rb_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="Month"
+                android:textColor="#777777" />
+        </RadioGroup>
+
+        <WebView
+            android:id="@+id/detill_Webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/detil_rg" />
+    </RelativeLayout>
+    
+    </LinearLayout>
+
+</LinearLayout>

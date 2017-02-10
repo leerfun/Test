@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+ 
+   <RelativeLayout 
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+      
+    <TextView android:id="@+id/TvMyStock"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="本地自选股"
+        android:textSize="30sp"
+        android:gravity="center_vertical"
+        />
+
+    <GridView
+        android:listSelector="@drawable/click_listview_seclector"
+        android:id="@+id/GvMyStock"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:background="#888888"
+        android:numColumns="2"
+        android:layout_marginRight="50dp"
+        android:layout_below="@+id/TvMyStock" >
+    </GridView>
+    <ImageButton android:id="@+id/ibSet"
+        android:layout_width="35dp"
+        android:layout_height="35dp"       
+        android:background="@drawable/set_button_seclector"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dp"       
+        />
+
+    <ImageButton
+        android:id="@+id/ibAdd"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_above="@+id/ibSet"
+        android:layout_alignLeft="@+id/ibSet"
+        android:layout_marginBottom="36dp"
+        android:background="@null"
+        android:src="@drawable/add_button_seclector" />
+	<ImageButton 
+	    android:id="@+id/ib_delete"
+	    android:layout_width="35dp"
+	    android:layout_height="35dp"
+	    android:layout_above="@+id/ibSet"
+	    android:background="@null"
+        android:layout_alignLeft="@+id/ibSet"
+	    android:layout_marginBottom="107dp"
+	    android:src="@drawable/delete_button_seclector"/>
+	<ImageButton 
+	    android:id="@+id/ib_lucky"
+	    android:layout_width="35dp"
+	    android:layout_height="35dp"
+	    android:layout_above="@+id/ibSet"
+	    android:background="@null"
+        android:layout_alignLeft="@+id/ibSet"
+	    android:layout_marginBottom="178dp"
+	    android:src="@drawable/lucky_button_seclector"/>
+	<LinearLayout
+	    android:id="@+id/llLoading"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignParentTop="true" 
+	    android:gravity="center"
+	    android:orientation="vertical">
+
+		<ProgressBar
+		    android:layout_gravity="center_horizontal"
+		    android:id="@+id/pbLoading"
+		    style="?android:attr/progressBarStyleLarge"
+		    android:layout_width="wrap_content"
+		    android:background="@null"
+		    android:layout_height="wrap_content" />
+		
+
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="正在加载网络数据中..." />
+	</LinearLayout>
+
+	 </RelativeLayout> 
+	 
+</FrameLayout>

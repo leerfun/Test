@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">纯净自选股</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+    <color name="my_color_down">#FF0000</color>
+    <color name="my_color_up">#00FF00</color>
+    <color name="my_color_nomal">#FFFFFF</color>
+    <color name="my_color_backg">#888888</color>
+
+    <string name="title_activity_stock">StockActivity</string>
+    <string name="title_activity_bmob">BmobActivity</string>
+    <string name="title_activity_blank">BlankActivity</string>
+    <string name="title_activity_loading">LoadingActivity</string>
+
+</resources>
